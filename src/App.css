@@ -1,5 +1,5 @@
 :root {
-  --gradientPrimary: linear-gradient(#e66465, #9198e5);
+  --gradientPrimary: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
 }
 
 .App {
@@ -48,6 +48,10 @@
   }
 }
 
+.cardPreviewContainer {
+  position: absolute;
+}
+
 .gradientContainer {
   background: var(--gradientPrimary);
   width: 33%;
@@ -55,4 +59,16 @@
 
 .formContainer {
   width: 66%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.formContainer form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.formContainer form span {
+  color: red;
 }
