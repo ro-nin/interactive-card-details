@@ -4,6 +4,14 @@
   border-radius: 6px;
 }
 
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+    .card {
+        width: 200px;
+        height: 100px;
+    }
+  }
+
 .cardFront {
   background-image: url("/public/images/bg-card-front.png");
 }

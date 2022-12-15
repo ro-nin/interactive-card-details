@@ -5,6 +5,8 @@ type Props = {
   data: { [key: string]: string }
 }
 
+//TODO Make general purpose component, takes optional parameters and render front OR back, more reusable, instead of container
+
 const Card = ({ data }: Props) => {
   const cardHolderName = data['cardHolderName'] ?? ''
   const cardNumber = data['cardNumber'] ?? ''

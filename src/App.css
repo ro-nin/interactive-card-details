@@ -1,5 +1,6 @@
 :root {
   --gradientPrimary: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+  --smallScreenThreshold: 600px;
 }
 
 .App {
@@ -39,6 +40,7 @@
 .content {
   height: 100vh;
   display: flex;
+  flex-direction: row;
 }
 
 /* On screens that are 600px or less, set the background color to olive */
@@ -57,16 +59,36 @@
   width: 33%;
 }
 
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  .gradientContainer {
+    height: 33%;
+    width: 100vw;
+  }
+}
+
 .formContainer {
   width: 66%;
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: center;
+  height: 100%;
 }
+
+@media screen and (max-width: 600px) {
+  .formContainer {
+    width: 100vw;
+  }
+}
+
 .formContainer form {
+  width: 66%;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 20px;
 }
 
 .formContainer form span {
