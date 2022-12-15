@@ -9,7 +9,6 @@
   .card {
     width: 16rem;
     height: 9rem;
-
   }
 }
 
@@ -17,12 +16,6 @@
   background-image: url("/public/images/bg-card-front.png");
   order: 1;
   background-size: cover;
-}
-
-@media screen and (max-width: 1300px) {
-  .cardFront {
-    order: 2;
-  }
 }
 
 .cardContent {
@@ -33,10 +26,4 @@
   order: 2;
   background-size: cover;
   background-image: url("/public/images/bg-card-back.png");
-}
-
-@media screen and (max-width: 1300px) {
-  .back {
-    order: 1;
-  }
 }
