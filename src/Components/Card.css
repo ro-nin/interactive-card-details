@@ -2,14 +2,14 @@
   width: 28rem;
   height: 15rem;
   border-radius: 6px;
-  margin: 2rem 0;
 }
 
-/* On screens that are 600px or less, set the background color to olive */
-@media screen and (max-width: 600px) {
+/* On screens that are 1300px or less, set the background color to olive */
+@media screen and (max-width: 1300px) {
   .card {
     width: 16rem;
-    height: 7.5rem;
+    height: 9rem;
+
   }
 }
 
@@ -19,7 +19,7 @@
   background-size: cover;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1300px) {
   .cardFront {
     order: 2;
   }
@@ -35,7 +35,7 @@
   background-image: url("/public/images/bg-card-back.png");
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1300px) {
   .back {
     order: 1;
   }

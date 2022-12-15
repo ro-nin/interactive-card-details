@@ -40,12 +40,12 @@ function App() {
           <form onSubmit={handleSubmit(onSubmit)}>
 
             <label>CARDHOLDER NAME</label>
-            {errors.cardHolderName && <span>Error: name</span>}
             <input defaultValue="" {...register("cardHolderName", { required: true })} />
+            {errors.cardHolderName && <span>Error: name</span>}
 
             <label>CARD NUMBER</label>
-            {errors.cardNumber && <span>Error: cardNumber</span>}
             <input {...register("cardNumber", { required: true })} />
+            {errors.cardNumber && <span>Error: cardNumber</span>}
 
             <label>EXP. DATE (MM/YY)</label>
             <input {...register("expMM", { required: true, maxLength: 2, min: 1, max: 12 })} />
@@ -55,9 +55,8 @@ function App() {
             {errors.expYY && <span>exp year</span>}
 
             <label>CVC</label>
-            {errors.cvc && <span>CVC</span>}
-
             <input type={"number"} {...register("cvc", { required: true, maxLength: 3, min: 1, max: 999 })} />
+            {errors.cvc && <span>CVC</span>}
 
             <input className='confirmButton' type="submit" />
           </form>

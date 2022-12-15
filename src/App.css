@@ -1,6 +1,6 @@
 :root {
   --gradientPrimary: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
-  --smallScreenThreshold: 600px;
+  --smallScreenThreshold: 1300px;
 }
 
 .App {
@@ -13,41 +13,41 @@
   flex-direction: row;
 }
 
-/* On screens that are 600px or less, set the background color to olive */
-@media screen and (max-width: 600px) {
+//TODO add a middle breakpoint
+
+/* On screens that are 1300px or less, set the background color to olive */
+@media screen and (max-width: 1300px) {
   .content {
     flex-direction: column;
   }
 }
 
-.cardsPreviewContainer {
-  position: absolute;
-  top: auto;
-}
-
 .cardFrontShift {
   top: 4em;
-  position: relative;
+  position: absolute;
   left: 10em;
+  margin: 2rem 0;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1300px) {
   .cardFrontShift {
-    top: 0em;
-    left: 7em;
+    left: 2em;
+    top: 5em;
+    z-index:50
   }
 }
 
 .cardBackShift {
-  top: 4em;
-  position: relative;
+  top: 20em;
+  margin: 2rem 0;
   left: 15em;
+  position: absolute;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1300px) {
   .cardBackShift {
-    top: 0em;
-    left: 4em;
+    left: 7em;
+    top: 2em;
   }
 }
 
@@ -58,13 +58,14 @@
   background-size: cover;
 }
 
-/* On screens that are 600px or less, set the background color to olive */
-@media screen and (max-width: 600px) {
+/* On screens that are 1300px or less, set the background color to olive */
+@media screen and (max-width: 1300px) {
   .gradientContainer {
-    height: 45%;
+    height: 25vh;
     width: 100vw;
     background-image: url("/public/images/bg-main-mobile.png");
     background-size: cover;
+    padding-bottom: 1rem;
   }
 }
 
@@ -77,9 +78,10 @@
   height: 100%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1300px) {
   .formContainer {
     width: 100vw;
+    height: 75vh;
   }
 }
 
