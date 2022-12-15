@@ -21,8 +21,13 @@ function App() {
   return (
     <div className="App">
       <div className='content'>
-        <div className='cardPreviewContainer'>
-          <Card data={watchFormFields}></Card>
+        <div className='cardsPreviewContainer'>
+          <div className="cardFrontShift">
+            <Card data={watchFormFields} front={true}></Card>
+          </div>
+          <div className="cardBackShift">
+            <Card front={false}></Card>
+          </div>
 
         </div>
         <div className="gradientContainer">

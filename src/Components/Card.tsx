@@ -2,21 +2,20 @@ import React from 'react'
 import './Card.css'
 // import bgCardFront from '/images/bg-card-front.png'
 type Props = {
-  data: { [key: string]: string }
+  data?: { [key: string]: string }
+  front: boolean //face to draw
 }
 
-//TODO Make general purpose component, takes optional parameters and render front OR back, more reusable, instead of container
-
-const Card = ({ data }: Props) => {
-  const cardHolderName = data['cardHolderName'] ?? ''
-  const cardNumber = data['cardNumber'] ?? ''
-  const expMM = data['expMM'] ?? ''
-  const expYY = data['expYY'] ?? ''
-  const cvc = data['cvc'] ?? ''
+const Card = ({ data, front }: Props) => {
+  const cardHolderName = data ? data['cardHolderName'] ?? '' : null
+  const cardNumber = data ? data['cardNumber'] ?? '' : null
+  const expMM = data ? data['expMM'] ?? '' : null
+  const expYY = data ? data['expYY'] ?? '' : null
+  const cvc = data ? data['cvc'] ?? '' : null
 
   return (
-    <div className="cardsContainer">
-      <div className='card cardFront'>
+    <>
+      {front && <div className='card cardFront'>
         <div className='cardContent' >
           <span>{cardHolderName}</span>
           <span>{cardNumber}</span>
@@ -24,10 +23,10 @@ const Card = ({ data }: Props) => {
           <span>{expYY}</span>
           <span>{cvc}</span>
         </div>
-      </div>
-      <div className='card cardBack'>
-      </div>
-    </div>
+      </div>}
+      {!front && <div className='card cardBack'>
+      </div>}
+    </>
 
   )
 }

@@ -1,19 +1,28 @@
 .card {
-  width: 400px;
-  height: 200px;
+  width: 28rem;
+  height: 15rem;
   border-radius: 6px;
+  margin: 2rem 0;
 }
 
 /* On screens that are 600px or less, set the background color to olive */
 @media screen and (max-width: 600px) {
-    .card {
-        width: 200px;
-        height: 100px;
-    }
+  .card {
+    width: 16rem;
+    height: 7.5rem;
   }
+}
 
 .cardFront {
   background-image: url("/public/images/bg-card-front.png");
+  order: 1;
+  background-size: cover;
+}
+
+@media screen and (max-width: 600px) {
+  .cardFront {
+    order: 2;
+  }
 }
 
 .cardContent {
@@ -21,6 +30,13 @@
   flex-direction: column;
 }
 .cardBack {
-    background-image: url("/public/images/bg-card-back.png");
+  order: 2;
+  background-size: cover;
+  background-image: url("/public/images/bg-card-back.png");
+}
 
+@media screen and (max-width: 600px) {
+  .back {
+    order: 1;
+  }
 }
