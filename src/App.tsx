@@ -15,11 +15,15 @@ type CardInputs = {
 function App() {
   const { register, handleSubmit, watch, formState: { errors } } = useForm<CardInputs>();
   const onSubmit: SubmitHandler<CardInputs> = data => console.log(data);
+
+  const watchFormFields = watch()
+
   return (
     <div className="App">
       <div className='content'>
         <div className='cardPreviewContainer'>
-          <Card></Card>
+          <Card data={watchFormFields}></Card>
+
         </div>
         <div className="gradientContainer">
 

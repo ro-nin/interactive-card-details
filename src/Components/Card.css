@@ -1,0 +1,18 @@
+.card {
+  width: 400px;
+  height: 200px;
+  border-radius: 6px;
+}
+
+.cardFront {
+  background-image: url("/public/images/bg-card-front.png");
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+}
+.cardBack {
+    background-image: url("/public/images/bg-card-back.png");
+
+}
