@@ -1,6 +1,8 @@
 :root {
   --gradientPrimary: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
   --smallScreenThreshold: 1300px;
+  --primary: #6246fb;
+  --primaryDark: #21092f;
 }
 
 * {
@@ -12,7 +14,6 @@
     font-size: 14px;
   }
 }
-
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
@@ -72,7 +73,7 @@ input[type="number"] {
 }
 
 .cardFrontShift {
-  left: 9em;
+  left: 7em;
   bottom: 1rem;
   position: relative;
 }
@@ -88,7 +89,7 @@ input[type="number"] {
 }
 
 .cardBackShift {
-  left: 18em;
+  left: 12em;
   top: 1rem;
   position: relative;
 }
@@ -137,6 +138,11 @@ input[type="number"] {
   min-height: 1.3rem;
 }
 
+.formContainer form label {
+  color: var(--primaryDark);
+  font-size: 0.8em;
+}
+
 .formContainer form input {
   padding: 0.5rem;
   margin-top: 0.2rem;
@@ -149,15 +155,15 @@ input[type="number"] {
   outline: 1px solid purple;
 } */
 
-input.errorInput{
+input.errorInput {
   border: 1px solid red !important;
 }
 input.errorInput:focus-visible {
-  outline: 2px solid red  !important;
+  outline: 2px solid red !important;
 }
 
 input:not(.errorInput):focus-visible {
-  outline: 2px solid purple  !important;
+  outline: 2px solid var(--primary) !important;
 }
 
 .inputLarge {
@@ -170,4 +176,20 @@ input:not(.errorInput):focus-visible {
 .errorLabel {
   display: block;
   color: red;
+  font-size: 0.8em;
+}
+
+.formContainer form input.confirmButton {
+  background: var(--primaryDark);
+  color: white;
+  width: 100%;
+  padding: 1em 0;
+}
+
+.formContainer form input.confirmButton:hover:enabled {
+  color: var(--primary);
+  cursor: pointer;
+}
+.formContainer form input.confirmButton:disabled {
+  background: gray;
 }
