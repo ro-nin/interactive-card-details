@@ -21,9 +21,46 @@
 .cardContent {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 .cardBack {
   order: 2;
   background-size: cover;
   background-image: url("/public/images/bg-card-back.png");
+}
+
+span {
+  color: white;
+  display: inline;
+}
+
+.topRow {
+  align-self: start;
+  padding-left: 3rem;
+  padding-top: 2rem;
+}
+
+/* On screens that are 1300px or less, set the background color to olive */
+
+.bottomRow {
+  justify-content: space-between;
+}
+.bottomRow div {
+  padding-bottom: 2rem;
+}
+
+@media screen and (max-width: 1300px) {
+  img {
+    height: 40px;
+    width: 70px;
+  }
+
+  .topRow {
+    padding-left: 1rem;
+    padding-top: 1rem;
+  }
+  .bottomRow div {
+    padding-bottom: 1rem;
+  }
 }

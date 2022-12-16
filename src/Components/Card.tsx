@@ -1,5 +1,6 @@
 import React from 'react'
 import './Card.css'
+import Logo from './card-logo.svg';
 // import bgCardFront from '/images/bg-card-front.png'
 type Props = {
   data?: { [key: string]: string }
@@ -17,15 +18,30 @@ const Card = ({ data, front }: Props) => {
     <>
       {front && <div className='card cardFront'>
         <div className='cardContent' >
-          <span>{cardHolderName}</span>
-          <span>{cardNumber}</span>
-          <span>{expMM}</span>
-          <span>{expYY}</span>
-          <span>{cvc}</span>
+          <div className="topRow" >
+            <img src={Logo} alt='card logo' />
+          </div>
+          <div className="bottomRow">
+            <div className="" >
+              <span>{cardNumber}</span>
+            </div>
+            <div className="" style={{ display: "flex", justifyContent: 'space-between', padding: ' 0 3rem 2rem' }}>
+              <span>{cardHolderName}</span>
+              <div className="">
+                <span>{expMM}</span>
+                <span>/</span>
+                <span>{expYY}</span>
+              </div>
+
+            </div>
+
+          </div>
         </div>
       </div>}
-      {!front && <div className='card cardBack'>
-      </div>}
+      {
+        !front && <div className='card cardBack'>
+        </div>
+      }
     </>
 
   )

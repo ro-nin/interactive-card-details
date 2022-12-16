@@ -65,10 +65,7 @@ function App() {
                 </div>
               </div>
 
-
             </div>
-
-
             <input className='confirmButton' type="submit" />
           </form>
         </div>
