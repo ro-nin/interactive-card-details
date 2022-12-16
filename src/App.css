@@ -101,8 +101,10 @@ input[type="number"] {
 }
 @media (max-width: 1300px) {
   .formContainer {
-    width: 100vw;
+    width: 80vw;
     padding-top: 6rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
   }
 }
 
@@ -119,7 +121,7 @@ input[type="number"] {
 
 .formContainer form span {
   text-align: left;
-  color: red;
+  min-height: 1.3rem;
 }
 
 .formContainer form input {
@@ -128,8 +130,13 @@ input[type="number"] {
   border-radius: 8px;
 }
 .inputLarge {
-  min-width: 24rem;
+  width: 100%;
 }
 .inputSmall {
-  max-width: 3.5rem;
+  width: 3.5rem;
+}
+
+.errorLabel {
+  display: block;
+  color: red;
 }
