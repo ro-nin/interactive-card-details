@@ -101,10 +101,24 @@ input[type="number"] {
     top: 5rem;
   }
 }
+.confirmButton {
+  background: var(--primaryDark);
+  color: white;
+  width: 100%;
+  padding: 1em 0;
+  max-width: 22em;
+  border-radius: .8em;
+}
 
-/* FORM */
+.confirmButton:hover:enabled {
+  color: var(--primary);
+  cursor: pointer;
+}
+.confirmButton:disabled {
+  background: gray;
+}
 
-.formContainer {
+.completedContainer {
   display: flex;
   flex-grow: 1;
   flex-shrink: 0;
@@ -114,7 +128,7 @@ input[type="number"] {
   width: 65vw;
 }
 @media (max-width: 1300px) {
-  .formContainer {
+  .completedContainer {
     width: 80vw;
     padding-top: 6rem;
     padding-right: 2rem;
@@ -122,74 +136,18 @@ input[type="number"] {
   }
 }
 
-.formContainer form {
-  gap: 0.4rem;
-  display: flex;
-  flex-grow: 1;
-  flex-shrink: 0;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
+h1,
+h2 {
+  margin: 0;
 }
 
-.formContainer form span {
-  text-align: left;
-  min-height: 1.3rem;
+h1 {
+  font-size: 2em;
+  margin-top: 1em;
 }
 
-.formContainer form label {
-  color: var(--primaryDark);
-  font-size: 0.8em;
-}
-
-.formContainer form input {
-  padding: 0.5rem;
-  margin-top: 0.2rem;
-  border-radius: 8px;
-  outline: none;
-  border: 1px solid gray;
-}
-
-/* input:focus-visible {
-  outline: 1px solid purple;
-} */
-
-input.errorInput {
-  border: 1px solid red !important;
-}
-input.errorInput:focus-visible {
-  outline: 2px solid red !important;
-}
-
-input:not(.errorInput):focus-visible {
-  outline: 2px solid var(--primary) !important;
-}
-
-.inputLarge {
-  width: 100%;
-}
-.inputSmall {
-  width: 3.5rem;
-}
-
-.errorLabel {
-  display: block;
-  color: red;
-  font-size: 0.8em;
-}
-
-.formContainer form input.confirmButton {
-  background: var(--primaryDark);
-  color: white;
-  width: 100%;
-  padding: 1em 0;
-}
-
-.formContainer form input.confirmButton:hover:enabled {
-  color: var(--primary);
-  cursor: pointer;
-}
-.formContainer form input.confirmButton:disabled {
-  background: gray;
+h2 {
+  font-size: 1em;
+  margin-top: 0.8em;
+  color: gray;
 }
