@@ -21,30 +21,47 @@ function App() {
   return (
     <div className="App">
       <div className=' cardPage '>
-        <div className="cardFrontShift">
-          <Card data={watchFormFields} front={true}></Card>
+        <div className="gradientContainer" >
+          <div className="cardsPreviewContainer">
+            <div className="cardFrontShift">
+              <Card data={watchFormFields} front={true}></Card>
+            </div>
+            <div className="cardBackShift">
+              <Card front={false}></Card>
+            </div>
+          </div>
         </div>
-        <div className="cardBackShift">
-          <Card front={false}></Card>
-        </div>
-
-        <div className="gradientContainer" />
         <div className="formContainer">
           <form onSubmit={handleSubmit(onSubmit)}>
             <label>CARDHOLDER NAME</label>
-            <input defaultValue="" {...register("cardHolderName", { required: true })} />
+            <input className='inputLarge' defaultValue="" {...register("cardHolderName", { required: true })} />
             {errors.cardHolderName && <span>Error: name</span>}
+           
             <label>CARD NUMBER</label>
-            <input {...register("cardNumber", { required: true })} />
+            <input className='inputLarge' {...register("cardNumber", { required: true })} />
             {errors.cardNumber && <span>Error: cardNumber</span>}
-            <label>EXP. DATE (MM/YY)</label>
-            <input {...register("expMM", { required: true, maxLength: 2, min: 1, max: 12 })} />
-            {errors.expMM && <span>exm month</span>}
-            <input {...register("expYY", { required: true, maxLength: 2, min: 1, max: 99 })} />
-            {errors.expYY && <span>exp year</span>}
-            <label>CVC</label>
-            <input type={"number"} {...register("cvc", { required: true, maxLength: 3, min: 1, max: 999 })} />
-            {errors.cvc && <span>CVC</span>}
+            
+            <div className="" style={{ width: '100%', display: "flex", gap: "2rem", alignItems: "start" }}>
+              <div className="" style={{ alignItems: "start", textAlign: 'left' }}>
+                <label>EXP. DATE (MM/YY)</label>
+                <div className="" style={{ display: "flex", gap: ".4rem", alignItems: "start" }}>
+                  <input className='inputSmall' {...register("expMM", { required: true, maxLength: 2, min: 1, max: 12 })} />
+                  {errors.expMM && <span>exm month</span>}
+                  <input className='inputSmall' {...register("expYY", { required: true, maxLength: 2, min: 1, max: 99 })} />
+                  {errors.expYY && <span>exp year</span>}
+                </div>
+              </div>
+              <div className="" style={{ flexGrow: '1', flexShrink: '0', alignItems: "start", alignSelf: "end", textAlign: 'left' }}>
+                <label>CVC</label>
+                <div className="" style={{ display: 'flex', }}>
+                  <input className='' style={{ flexGrow: '1', flexShrink: '0', }} type={"number"} {...register("cvc", { required: true, maxLength: 3, min: 1, max: 999 })} />
+                  {errors.cvc && <span>CVC</span>}
+                </div>
+              </div>
+
+
+            </div>
+
 
             <input className='confirmButton' type="submit" />
           </form>
