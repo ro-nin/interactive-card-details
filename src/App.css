@@ -3,6 +3,10 @@
   --smallScreenThreshold: 1300px;
 }
 
+/* * {
+  font-size: 18px;
+} */
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -90,6 +94,8 @@ input[type="number"] {
   }
 }
 
+/* FORM */
+
 .formContainer {
   display: flex;
   flex-grow: 1;
@@ -128,7 +134,23 @@ input[type="number"] {
   padding: 0.5rem;
   margin-top: 0.2rem;
   border-radius: 8px;
+  border: 1px solid gray;
+  outline: none;
 }
+
+/* input:focus-visible {
+  outline: 1px solid purple;
+} */
+
+input.errorInput:focus-visible {
+  border: 1px solid red;
+  /* outline: 2px solid red; */
+}
+input:not(.errorInput):focus-visible {
+  border: 1px solid purple;
+  /* outline: 2px solid purple; */
+}
+
 .inputLarge {
   width: 100%;
 }
