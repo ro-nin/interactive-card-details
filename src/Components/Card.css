@@ -7,8 +7,8 @@
 /* On screens that are 1300px or less, set the background color to olive */
 @media screen and (max-width: 1300px) {
   .card {
-    width: 16rem;
-    height: 9rem;
+    width: 22rem;
+    height: 14rem;
   }
 }
 

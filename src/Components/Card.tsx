@@ -22,7 +22,7 @@ const Card = ({ data, front }: Props) => {
             <img src={Logo} alt='card logo' />
           </div>
           <div className="bottomRow" style={{ padding: '3rem 3rem 4rem 3rem' }}>
-            <div className="" style={{ textAlign: "left", paddingBottom: '2rem', fontSize: '1.5rem' }} >
+            <div className="" style={{ textAlign: "left", paddingBottom: '2rem', }} >
               <span>{cardNumber?.slice(0, 4)} </span>
               <span>{cardNumber?.slice(4, 8)} </span>
               <span>{cardNumber?.slice(8, 12)} </span>
