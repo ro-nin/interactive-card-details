@@ -134,21 +134,23 @@ input[type="number"] {
   padding: 0.5rem;
   margin-top: 0.2rem;
   border-radius: 8px;
-  border: 1px solid gray;
   outline: none;
+  border: 1px solid gray;
 }
 
 /* input:focus-visible {
   outline: 1px solid purple;
 } */
 
-input.errorInput:focus-visible {
-  border: 1px solid red;
-  /* outline: 2px solid red; */
+input.errorInput{
+  border: 1px solid red !important;
 }
+input.errorInput:focus-visible {
+  outline: 2px solid red  !important;
+}
+
 input:not(.errorInput):focus-visible {
-  border: 1px solid purple;
-  /* outline: 2px solid purple; */
+  outline: 2px solid purple  !important;
 }
 
 .inputLarge {
