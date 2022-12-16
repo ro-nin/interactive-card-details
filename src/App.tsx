@@ -39,10 +39,29 @@ function App() {
 
             <label>CARD NUMBER</label>
             <input aria-invalid={errors.cardNumber ? true : false} className={`inputLarge ${errors.cardNumber ? 'errorInput' : ''}`} {...register("cardNumber", {
+              setValueAs: value => {
+                if (value) {
+                  //TODO clean and improve
+                  const cleanedValued = value.replaceAll('-', '').trim().replaceAll(' ', '')
+                  console.log('setval before', value, 'returning:', cleanedValued);
+                  return cleanedValued
+
+                }
+              },
+              // onChange: e => {
+              //   if (e) {
+              //     const value = e.target.value.trim().replaceAll('-', '').replaceAll(' ', '').split('')
+              //     //TODO set state to change input field manually
+              //     console.log('onchange', value);
+              //   }
+              // },
               pattern: {
-                value: /^[0-9]{13}(?:[0-9]{3})?$/,
-                message: 'Insert valid card format.'
+                value: /^([0-9]{4}[- ]?){4}$/,
+                message: 'Insert valid card format (16 digits).'
               }, required: 'Insert your card number.'
+              // , maxLength: { value: 16, message: 'Insert 16 characters' }, minLength: { value: 16, message: 'Insert 16 characters' },
+
+
             })} />
             <span className={`errorLabel`}>{errors.cardNumber ? errors.cardNumber.message : ``}</span>
 

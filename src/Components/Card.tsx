@@ -23,7 +23,10 @@ const Card = ({ data, front }: Props) => {
           </div>
           <div className="bottomRow">
             <div className="" >
-              <span>{cardNumber}</span>
+              <span>{cardNumber?.slice(0,4)} </span>
+              <span>{cardNumber?.slice(4,8)} </span>
+              <span>{cardNumber?.slice(8,12)} </span>
+              <span>{cardNumber?.slice(12,16)}</span>
             </div>
             <div className="" style={{ display: "flex", justifyContent: 'space-between', padding: ' 0 3rem 2rem' }}>
               <span>{cardHolderName}</span>
