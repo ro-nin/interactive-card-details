@@ -1,76 +1,71 @@
-/* FORM */
-
 .formContainer {
-    display: flex;
-    flex-grow: 1;
-    flex-shrink: 0;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    width: 65vw;
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 0;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 65vw;
+}
+@media (max-width: 1300px) {
+  .formContainer {
+    width: 80vw;
+    padding-top: 6rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
   }
-  @media (max-width: 1300px) {
-    .formContainer {
-      width: 80vw;
-      padding-top: 6rem;
-      padding-right: 2rem;
-      padding-left: 2rem;
-      padding-bottom:2rem;
-    }
-  }
-  
-  .formContainer form {
-    gap: 0.4rem;
-    display: flex;
-    flex-grow: 1;
-    flex-shrink: 0;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-  }
-  
-  .formContainer form span {
-    text-align: left;
-    min-height: 1.3rem;
-  }
-  
-  .formContainer form label {
-    color: var(--primaryDark);
-    font-size: 0.8em;
-  }
-  
-  .formContainer form input:not([type='submit']) {
-    padding: 0.5rem;
-    margin-top: 0.2rem;
-    border-radius: 8px;
-    outline: none;
-    border: 1px solid gray;
-  }
-  
-  input.errorInput {
-    border: 1px solid red !important;
-  }
-  input.errorInput:focus-visible {
-    outline: 2px solid red !important;
-  }
-  
-  input:not(.errorInput):focus-visible {
-    outline: 2px solid var(--primary) !important;
-  }
-  
-  .inputLarge {
-    width: 100%;
-  }
-  .inputSmall {
-    width: 3.5rem;
-  }
-  
-  .errorLabel {
-    display: block;
-    color: red;
-    font-size: 0.8em;
-  }
-  
-   
-  
+}
+
+.formContainer form {
+  gap: 0.4rem;
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 0;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.formContainer form span {
+  text-align: left;
+  min-height: 1.3rem;
+}
+
+.formContainer form label {
+  color: var(--primaryDark);
+  font-size: 0.8em;
+}
+
+.formContainer form input:not([type="submit"]) {
+  padding: 0.5rem;
+  margin-top: 0.2rem;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid gray;
+}
+
+input.errorInput {
+  border: 1px solid red !important;
+}
+input.errorInput:focus-visible {
+  outline: 2px solid red !important;
+}
+
+input:not(.errorInput):focus-visible {
+  outline: 2px solid var(--primary) !important;
+}
+
+.inputLarge {
+  width: 100%;
+}
+.inputSmall {
+  width: 3.5rem;
+}
+
+.errorLabel {
+  display: block;
+  color: red;
+  font-size: 0.8em;
+}

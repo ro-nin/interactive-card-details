@@ -16,8 +16,8 @@ const CardForm = ({ handleSubmit, onSubmit, errors, register }: Props) => {
         defaultValue="" {...register("cardHolderName", { maxLength: { value: 20, message: 'Name too long (max 20 characters.)' }, required: 'Insert a full name.' })} />
       <span className={`errorLabel`}>{errors.cardHolderName ? errors.cardHolderName.message : ``}</span>
 
-      <label htmlFor='cardNumber'>CARD NUMBER</label>
-      <input aria-invalid={errors.cardNumber ? true : false}
+      <label id='cardNumber' htmlFor='cardNumber'>CARD NUMBER</label>
+      <input aria-labelledby='cardNumber' aria-invalid={errors.cardNumber ? true : false}
         placeholder='e.g. 1234 1234 1234 1234'
         className={`inputLarge ${errors.cardNumber ? 'errorInput' : ''}`}
         {...register("cardNumber", {
@@ -35,9 +35,10 @@ const CardForm = ({ handleSubmit, onSubmit, errors, register }: Props) => {
           //     console.log('onchange', value);
           //   }
           // },
+
           pattern: {
             value: /^([0-9]{4}[- ]?){4}$/,
-            message: 'Insert valid card format (16 digits).'
+            message: 'Wrong format, numbers only'
           }, required: 'Insert your card number.'
         })} />
       <span className={`errorLabel`}>{errors.cardNumber ? errors.cardNumber.message : ``}</span>
@@ -77,12 +78,12 @@ const CardForm = ({ handleSubmit, onSubmit, errors, register }: Props) => {
         </div>
 
       </div>
-      <input disabled={errors.cardHolderName != null ||
+      <button data-testid="confirmButton" disabled={errors.cardHolderName != null ||
         errors.cardNumber != null
         || errors.cvc != null
         || errors.expMM != null
         || errors.expYY != null
-        ? true : false} className={`confirmButton`} type="submit" value='Confirm' />
+        ? true : false} className={`confirmButton`} type="submit" value='Confirm' >Confirm</button>
     </form>
   </div>;
 
