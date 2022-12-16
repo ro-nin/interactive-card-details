@@ -15,6 +15,7 @@
       padding-top: 6rem;
       padding-right: 2rem;
       padding-left: 2rem;
+      padding-bottom:2rem;
     }
   }
   
@@ -39,17 +40,13 @@
     font-size: 0.8em;
   }
   
-  .formContainer form input {
+  .formContainer form input:not([type='submit']) {
     padding: 0.5rem;
     margin-top: 0.2rem;
     border-radius: 8px;
     outline: none;
     border: 1px solid gray;
   }
-  
-  /* input:focus-visible {
-    outline: 1px solid purple;
-  } */
   
   input.errorInput {
     border: 1px solid red !important;

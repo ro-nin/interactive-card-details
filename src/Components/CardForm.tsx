@@ -10,9 +10,10 @@ const CardForm = ({ handleSubmit, onSubmit, errors, register }: Props) => {
   return <div className="formContainer">
     <form onSubmit={handleSubmit(onSubmit)}>
       <label htmlFor='cardHolderName'>CARDHOLDER NAME</label>
+      {/* TODO pattern for NAME input field (no numbers?) */}
       <input aria-invalid={errors.cardHolderName ? true : false}
         className={`inputLarge ${errors.cardHolderName ? 'errorInput' : ''}`} placeholder='e.g. Jane Appleseed'
-        defaultValue="" {...register("cardHolderName", { maxLength: 35, required: 'Insert a full name.' })} />
+        defaultValue="" {...register("cardHolderName", { maxLength: { value: 20, message: 'Name too long (max 20 characters.)' }, required: 'Insert a full name.' })} />
       <span className={`errorLabel`}>{errors.cardHolderName ? errors.cardHolderName.message : ``}</span>
 
       <label htmlFor='cardNumber'>CARD NUMBER</label>

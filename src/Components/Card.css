@@ -4,7 +4,6 @@
   border-radius: 6px;
 }
 
-/* On screens that are 1300px or less, set the background color to olive */
 @media screen and (max-width: 1300px) {
   .card {
     width: 22em;
@@ -40,8 +39,6 @@ span {
   padding-left: 3em;
   padding-top: 2em;
 }
-
-/* On screens that are 1300px or less, set the background color to olive */
 
 .bottomRow {
   justify-content: space-between;

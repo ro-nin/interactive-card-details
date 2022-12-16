@@ -15,7 +15,7 @@ type CardInputs = {
 
 function App() {
 
-  const [cardCreated, setCardCreated] = useState(true)
+  const [cardCreated, setCardCreated] = useState(false)
   const { register, handleSubmit, watch, reset, formState: { errors } } = useForm<CardInputs>();
   const onSubmit: SubmitHandler<CardInputs> = data => setCardCreated(!cardCreated);
   const watchFormFields = watch()

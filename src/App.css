@@ -45,7 +45,6 @@ input[type="number"] {
 }
 
 .gradientContainer {
-  /* background: var(--gradientPrimary); */
   background-image: url("/public/images/bg-main-desktop.png");
   background-size: cover;
   width: 35vw;
@@ -105,9 +104,8 @@ input[type="number"] {
   background: var(--primaryDark);
   color: white;
   width: 100%;
-  padding: 1em 0;
-  max-width: 22em;
-  border-radius: .8em;
+  padding: 1em 0em;
+  border-radius: 0.8em;
 }
 
 .confirmButton:hover:enabled {
