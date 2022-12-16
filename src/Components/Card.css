@@ -56,7 +56,7 @@ span {
 }
 
 @media screen and (max-width: 1300px) {
-  img {
+  .topRow img {
     height: 40px;
     width: 70px;
   }
