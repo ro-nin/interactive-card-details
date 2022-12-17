@@ -9,6 +9,8 @@ This is a solution to the [Interactive card details form challenge on Frontend M
   - [Overview](#overview)
     - [The challenge](#the-challenge)
     - [Screenshot](#screenshot)
+      - [Assignment Design](#assignment-design)
+      - [Current Solution](#current-solution)
     - [Links](#links)
   - [My process](#my-process)
     - [Built with](#built-with)
@@ -37,20 +39,22 @@ Users should be able to:
 - See hover, active, and focus states for interactive elements on the page
 
 ### Screenshot
+#### Assignment Design
 ![DesignToRecreate](./problem.jpg)
+#### Current Solution
 ![MySolution](./solution.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Source](https://github.com/ro-nin/interactive-card-details)
+- Live Site URL: [View Deploy](https://interactive-card-details-opal.vercel.app/)
 
 ## My process
 
 ### Built with
 
 - [Create React App](https://github.com/facebook/create-react-app).
-- [React](https://reactjs.org/) - JS library
+- [React](https://reactjs.org/)
 
 ### Continued development
 
@@ -58,7 +62,7 @@ Improve semantic html, better testing, reorganize the responsive workflow, explo
 
 ## Author
 
-- Website - [Emanuele C.](https://emkorp.vercel.app)
+- Website - [Portfolio](https://emkorp.vercel.app)
 
 
 # Execution
