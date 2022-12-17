@@ -1,12 +1,27 @@
 .card {
-  width: 26em;
-  height: 13.5em;
   border-radius: 6px;
 }
-
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 300px) {
+  .card {
+    width: 20em;
+    height: 11em;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 768px) {
   .card {
     width: 22em;
+    height: 12em;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1300px) {
+  .card {
+    width: 24em;
+    height: 13em;
+  }
+}
+@media screen and (min-width: 1301px) {
+  .card {
+    width: 26em;
     height: 14em;
   }
 }
@@ -52,12 +67,11 @@ span {
   font-size: 1.3em;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1200px) {
   .topRow img {
     height: 40px;
     width: 70px;
   }
-
   .topRow {
     padding-left: 1em;
     padding-top: 1em;

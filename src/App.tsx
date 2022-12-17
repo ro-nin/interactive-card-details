@@ -41,10 +41,13 @@ function App() {
         {!cardCreated && <CardForm handleSubmit={handleSubmit} onSubmit={onSubmit} errors={errors} register={register} />
         }
         {cardCreated && <div className="completedContainer">
-          <img src={IconComplete} alt='complete icon'></img>
-          <h1>THANK YOU!</h1>
-          <h2>We've added your card details</h2>
-          <button style={{ marginTop: '3em' }} className='confirmButton' onClick={() => restart()}>Continue</button>
+          <div className="" style={{ width: '50%' }}>
+            <img src={IconComplete} alt='complete icon'></img>
+            <h1>THANK YOU!</h1>
+            <h2>We've added your card details</h2>
+            <button style={{ marginTop: '3em' }} className='confirmButton' onClick={() => restart()}>Continue</button>
+
+          </div>
         </div>
         }
       </div>
