@@ -8,11 +8,11 @@ type Props = {
 }
 
 const Card = ({ data, front }: Props) => {
-  const cardHolderName = data ? data['cardHolderName'] ?? '' : null
-  const cardNumber = data ? data['cardNumber'] ?? '' : null
-  const expMM = data ? data['expMM'] ?? '' : null
-  const expYY = data ? data['expYY'] ?? '' : null
-  const cvc = data ? data['cvc'] ?? '' : null
+  const cardHolderName = data ? data['cardHolderName'] ?? 'Name Surname' : null
+  const cardNumber = data ? data['cardNumber'] ?? '0000000000000000' : null
+  const expMM = data ? data['expMM'] ?? '00' : null
+  const expYY = data ? data['expYY'] ?? '00' : null
+  const cvc = data ? data['cvc'] ?? '000' : null
 
   return (
     <>
@@ -43,6 +43,7 @@ const Card = ({ data, front }: Props) => {
       </div>}
       {
         !front && <div className='card cardBack'>
+          <span>{cvc }</span>
         </div>
       }
     </>

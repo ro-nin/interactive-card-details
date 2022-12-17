@@ -34,7 +34,7 @@ function App() {
               <Card data={watchFormFields} front={true}></Card>
             </div>
             <div className="cardBackShift">
-              <Card front={false}></Card>
+              <Card data={watchFormFields} front={false} ></Card>
             </div>
           </div>
         </div>

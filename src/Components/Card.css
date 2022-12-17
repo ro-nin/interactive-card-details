@@ -42,6 +42,14 @@
   order: 2;
   background-size: cover;
   background-image: url("/public/images/bg-card-back.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cardBack span {
+  color: white;
+  position: relative;
+  left: 7em;
 }
 
 span {
