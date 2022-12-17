@@ -19,6 +19,12 @@ function App() {
   const { register, handleSubmit, watch, reset, formState: { errors } } = useForm<CardInputs>();
   const onSubmit: SubmitHandler<CardInputs> = data => setCardCreated(!cardCreated);
   const watchFormFields = watch()
+  //TODO, add guard for empty string return from watch() that resets placeholder fields ^
+  const cardHolderName = watchFormFields['cardHolderName'] ?? 'Name Surname'
+  const cardNumber = watchFormFields['cardNumber'] ?? '0000000000000000'
+  const expMM = watchFormFields['expMM'] ?? '00'
+  const expYY = watchFormFields['expYY'] ?? '00'
+  const cvc = watchFormFields['cvc'] ?? '000'
 
   const restart = () => {
     reset(); //reset form to default state
@@ -31,10 +37,10 @@ function App() {
         <div className="gradientContainer" >
           <div className="cardsPreviewContainer">
             <div className="cardFrontShift">
-              <Card data={watchFormFields} front={true}></Card>
+              <Card front={true} cardHolderName={cardHolderName} cardNumber={cardNumber} expMM={expMM} expYY={expYY} ></Card>
             </div>
             <div className="cardBackShift">
-              <Card data={watchFormFields} front={false} ></Card>
+              <Card front={false} cvc={cvc} ></Card>
             </div>
           </div>
         </div>

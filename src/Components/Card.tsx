@@ -2,16 +2,22 @@ import React from 'react'
 import './Card.css'
 import Logo from './card-logo.svg';
 type Props = {
-  data?: { [key: string]: string } //TODO £: use enum or equivalent to have typed keys
+  cardHolderName?: string,
+  cardNumber?: string,
+  expMM?: string,
+  expYY?: string,
+  cvc?: string;
   front: boolean //face to draw
 }
-const Card = ({ data, front }: Props) => {
-  //TODO £: use enum or equivalent to have typed keys
-  const cardHolderName = data ? data['cardHolderName'] ?? 'Name Surname' : null
-  const cardNumber = data ? data['cardNumber'] ?? '0000000000000000' : null
-  const expMM = data ? data['expMM'] ?? '00' : null
-  const expYY = data ? data['expYY'] ?? '00' : null
-  const cvc = data ? data['cvc'] ?? '000' : null
+const Card = ({
+  cardHolderName,
+  cardNumber,
+  expMM,
+  expYY,
+  cvc,
+  front
+}: Props) => {
+
 
   return (
     <>
