@@ -1,5 +1,67 @@
-# Getting Started with Create React App
+# Frontend Mentor - Interactive card details form solution
 
+This is a solution to the [Interactive card details form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+
+## Table of contents
+
+- [Frontend Mentor - Interactive card details form solution](#frontend-mentor---interactive-card-details-form-solution)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [Continued development](#continued-development)
+  - [Author](#author)
+- [Execution](#execution)
+  - [Available Scripts](#available-scripts)
+    - [`npm start`](#npm-start)
+    - [`npm test`](#npm-test)
+    - [`npm run build`](#npm-run-build)
+    - [`npm run eject`](#npm-run-eject)
+  - [Learn More](#learn-more)
+
+
+## Overview
+Front-End exercise, recreate an interactive card component from a given design (provided as images still of main state/interactions).
+### The challenge
+
+Users should be able to:
+
+- Fill in the form and see the card details update in real-time
+- Receive error messages when the form is submitted if:
+  - Any input field is empty
+  - The card number, expiry date, or CVC fields are in the wrong format
+- View the optimal layout depending on their device's screen size
+- See hover, active, and focus states for interactive elements on the page
+
+### Screenshot
+![DesignToRecreate](./problem.jpg)
+![MySolution](./solution.png)
+
+### Links
+
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+
+## My process
+
+### Built with
+
+- [Create React App](https://github.com/facebook/create-react-app).
+- [React](https://reactjs.org/) - JS library
+
+### Continued development
+
+Improve semantic html, better testing, reorganize the responsive workflow, explore other Css-in-JS solution (eg Styled Components), implement form validation tool (Zod).
+
+## Author
+
+- Website - [Emanuele C.](https://emkorp.vercel.app)
+
+
+# Execution
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

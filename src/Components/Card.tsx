@@ -3,7 +3,7 @@ import './Card.css'
 import Logo from './card-logo.svg';
 type Props = {
   cardHolderName?: string,
-  cardNumber?: string,
+  cardNumber?: string, //16 digits
   expMM?: string,
   expYY?: string,
   cvc?: string;
