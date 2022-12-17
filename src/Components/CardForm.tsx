@@ -1,7 +1,13 @@
 import React from 'react'
+import { FieldErrorsImpl, SubmitHandler, UseFormHandleSubmit, UseFormRegister } from 'react-hook-form'
+import { CardInputs } from '../App'
 import './CardForm.css'
 type Props = {
-  handleSubmit: any, onSubmit: any, errors: any, register: any
+  //React Hook Forms useForm returned objects
+  handleSubmit: UseFormHandleSubmit<CardInputs>,
+  onSubmit: SubmitHandler<CardInputs>,
+  errors: Partial<FieldErrorsImpl<CardInputs>>,
+  register: UseFormRegister<CardInputs>
 }
 
 const CardForm = ({ handleSubmit, onSubmit, errors, register }: Props) => {
@@ -31,11 +37,9 @@ const CardForm = ({ handleSubmit, onSubmit, errors, register }: Props) => {
           // onChange: e => {
           //   if (e) {
           //     const value = e.target.value.trim().replaceAll('-', '').replaceAll(' ', '').split('')
-          //     //TODO set state to change input field manually
-          //     console.log('onchange', value);
+          //     //TODO set state to change input field manually and spaces for clarity
           //   }
           // },
-
           pattern: {
             value: /^([0-9]{4}[- ]?){4}$/,
             message: 'Wrong format, numbers only'
@@ -45,7 +49,6 @@ const CardForm = ({ handleSubmit, onSubmit, errors, register }: Props) => {
 
       <div className="" style={{ width: `100%`, display: "flex", alignItems: "start", gap: `2rem` }}>
         <div className="" style={{ flexGrow: `1`, flexShrink: `0`, textAlign: `left` }}>
-
           <label>EXP. DATE (MM/YY)</label>
           <div className="" style={{ display: "flex", alignItems: "start", flexDirection: `column`, flexShrink: 0 }}>
             <div className="" style={{ display: "flex", gap: `.5rem` }}>
@@ -66,17 +69,15 @@ const CardForm = ({ handleSubmit, onSubmit, errors, register }: Props) => {
               {errors.expMM ? <span className={`errorLabel`}>{errors.expMM.message}</span> : <span style={{ display: `block`, }}> </span>}
               {errors.expYY ? <span className={`errorLabel`}>{errors.expYY.message}</span> : <span style={{ display: `block` }}> </span>}
             </div>
-
           </div>
         </div>
         <div className="" style={{ flexGrow: `1`, textAlign: `left` }}>
           <label>CVC</label>
           <div className="">
-            <input aria-invalid={errors.cvc ? true : false} placeholder='e.g. 123' className={`${errors.cvc ? 'errorInput' : ''}`} style={{ width: `100%`, }} type={"number"} {...register("cvc", { valueAsNumber: true, required: 'Insert a valid CVC', maxLength: 3, min: 111, max: 999 })} />
+            <input aria-invalid={errors.cvc ? true : false} placeholder='e.g. 123' className={`${errors.cvc ? 'errorInput' : ''}`} style={{ width: `100%`, }} type={"number"} {...register("cvc", { required: 'Insert a valid CVC', maxLength: 3, min: 111, max: 999 })} />
             <span className={`errorLabel`}>{errors.cvc ? errors.cvc.message : ``}</span>
           </div>
         </div>
-
       </div>
       <button data-testid="confirmButton" disabled={errors.cardHolderName != null ||
         errors.cardNumber != null

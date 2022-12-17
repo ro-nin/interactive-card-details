@@ -73,7 +73,7 @@ input[type="number"] {
   width: 100%;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
   position: relative;
   top: 3em;
 }

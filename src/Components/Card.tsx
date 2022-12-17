@@ -1,13 +1,12 @@
 import React from 'react'
 import './Card.css'
 import Logo from './card-logo.svg';
-// import bgCardFront from '/images/bg-card-front.png'
 type Props = {
-  data?: { [key: string]: string }
+  data?: { [key: string]: string } //TODO £: use enum or equivalent to have typed keys
   front: boolean //face to draw
 }
-
 const Card = ({ data, front }: Props) => {
+  //TODO £: use enum or equivalent to have typed keys
   const cardHolderName = data ? data['cardHolderName'] ?? 'Name Surname' : null
   const cardNumber = data ? data['cardNumber'] ?? '0000000000000000' : null
   const expMM = data ? data['expMM'] ?? '00' : null
@@ -35,20 +34,16 @@ const Card = ({ data, front }: Props) => {
                 <span>/</span>
                 <span>{expYY}</span>
               </div>
-
             </div>
-
           </div>
         </div>
       </div>}
       {
         !front && <div className='card cardBack'>
-          <span>{cvc }</span>
+          <span>{cvc}</span>
         </div>
       }
     </>
-
   )
 }
-
 export default Card

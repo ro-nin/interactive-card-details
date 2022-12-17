@@ -5,7 +5,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import CardForm from './Components/CardForm';
 import IconComplete from './icon-complete.svg';
 
-type CardInputs = {
+export type CardInputs = {
   cardHolderName: string,
   cardNumber: string,
   expMM: string,
@@ -27,7 +27,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className={`cardPage`}>
+      <main className={`cardPage`}>
         <div className="gradientContainer" >
           <div className="cardsPreviewContainer">
             <div className="cardFrontShift">
@@ -46,11 +46,10 @@ function App() {
             <h1>THANK YOU!</h1>
             <h2>We've added your card details</h2>
             <button style={{ marginTop: '3em' }} className='confirmButton' onClick={() => restart()}>Continue</button>
-
           </div>
         </div>
         }
-      </div>
+      </main>
     </div>
   );
 }
